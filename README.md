@@ -22,6 +22,7 @@ In order to run the python script, your system must have the following programs/
 * User scans Telegram login QR code to log in into the Telegram Desktop application.
 * Run python script script.py using py script.py in the terminal
 * The script reads a customized message from an excel sheet.
+* The script works with path to your Telegram Deckstop App (here I used mine). To make things work, you should change the path inside code to your own.
 * The script reads rows one by one and searches that username in the Telegram Desktop Application search box if the username found on Telegram then it will send a configured message otherwise It reads next row. 
 * Loop executes until and unless all rows complete.
 
@@ -47,7 +48,7 @@ def paste(text):
     pyautogui.hotkey('ctrl', 'v', interval=0.25)
 
 
-telegramPath = 'C:\\Users\\Sima Forest\\AppData\\Roaming\\Telegram Desktop\\Telegram.exe'
+telegramPath = 'C:\\Users\\Sima Forest\\AppData\\Roaming\\Telegram Desktop\\Telegram.exe'//here you should insert your path
 telegram = Popen(telegramPath)
 # while telegram.poll() is None:
 #     telegram.wait()
